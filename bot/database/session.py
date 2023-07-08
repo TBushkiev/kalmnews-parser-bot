@@ -17,14 +17,12 @@ SQLALCHEMY_DATABASE_URL = URL.create(
     database=settings.DB
 )
 
-engine = create_engine(settings.SQLALCHEMY_DATABASE_URL, echo=True)
+engine = create_engine(SQLALCHEMY_DATABASE_URL, echo=True)
 SessionLocal = sessionmaker(engine, expire_on_commit=False, class_=Session)
 
 
 def init_models() -> None:
     # create db tables
-    with engine.begin() as conn:
-        conn.run_sync(Base.metadata.create_all)
-
+    Base.metadata.create_all(engine)
 
 init_models()

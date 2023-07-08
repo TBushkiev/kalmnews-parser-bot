@@ -72,10 +72,4 @@ class Vesti:
         return news_title, news_text, news_date
 
 
-if __name__ == '__main__':
-    url = 'https://vesti-kalmykia.ru/news/zaversheno-rassledovanie-ugolovnogo-dela-v-otnoshenii-sotrudnika-celinnogo-res-obvinyaemogo-v-zloupotreblenii-sluzhebnymi-polnomochiyami'  # новость из текущего года
-    old_news_url = 'https://vesti-kalmykia.ru/news/v-zagorodnoj-rezidencii-basana-gorodovikova-sostoyalas-uborka'  # новость из прошлого года
-
-    parser = Vesti()
-    print(parser.get_news_data(url=url))
-    print(parser.get_news_data(url=old_news_url))
+parser = Vesti()

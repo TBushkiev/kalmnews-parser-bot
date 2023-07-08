@@ -3,4 +3,4 @@
 # for more details: https://github.com/tiangolo/full-stack-fastapi-postgresql/issues/28
 
 from database.base_class import Base # noqa
-from models.object import Object # noqa
+from models.news import News # noqa

@@ -46,3 +46,6 @@ class RiaKalm:
         news_text = self._get_news_text(html_code)
         news_date = self._get_news_date(html_code)
         return news_title, news_text, news_date
+
+
+parser = RiaKalm()
